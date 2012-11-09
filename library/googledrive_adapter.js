@@ -8,6 +8,9 @@ DS.GoogleDriveAdapter = DS.Adapter.extend({
     var request = gapi.client.request({
       'path': url,
       'method': type,
+      'params': hash.params || ''
+      'headers': hash.headers || ''
+      'body': hash.body || ''
     });
 
     request.execute( function (result) {
