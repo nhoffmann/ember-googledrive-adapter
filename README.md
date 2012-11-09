@@ -1,5 +1,5 @@
-GoogleDriveAdapter for ember data
-=============================
+## GoogleDriveAdapter for ember data [![Build Status](https://secure.travis-ci.org/nhoffmann/ember-googledrive-adapter.png?branch=master)](http://travis-ci.org/nhoffmann/ember-googledrive-adapter)
+
 
 GoogleDriveAdapter for [Ember Data](https://github.com/emberjs/data). This adapter communicates with GoogleDrive.
 
