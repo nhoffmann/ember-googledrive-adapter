@@ -69,7 +69,6 @@ DS.GoogleDriveAdapter = DS.Adapter.extend({
     var parts = type.toString().split(".");
     var name = parts[parts.length - 1];
     var result = name.replace(/([A-Z])/g, '_$1').toLowerCase().slice(1);
-    Em.Logger.log(result);
     return result;
   },
 
