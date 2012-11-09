@@ -128,47 +128,47 @@ test("createing a file makes POST to /drive/v2/files/", function() {
   equal(file, store.find(File, 1), "it's possible to find the file by the returned ID");
 });
 
-test("updating a file makes ...", function() {
+// test("updating a file makes ...", function() {
 
-});
+// });
 
-test("deleting a file makes ...", function() {
+// test("deleting a file makes ...", function() {
 
-});
+// });
 
-test("findMany makes ...", function() {
+// test("findMany makes ...", function() {
 
-});
+// });
 
-test("findAll makes ...", function() {
+// test("findAll makes ...", function() {
 
-});
+// });
 
-test("hasMany relationship dirties parent if child is added", function() {
+// test("hasMany relationship dirties parent if child is added", function() {
 
-});
+// });
 
-test("hasMany relationship dirties parent if child is removed", function() {
+// test("hasMany relationship dirties parent if child is removed", function() {
 
-});
+// });
 
-test("hasMany relationship dirties child if child is added", function() {
+// test("hasMany relationship dirties child if child is added", function() {
 
-});
+// });
 
-test("hasMany relationship dirties parent if child is updated", function() {
+// test("hasMany relationship dirties parent if child is updated", function() {
 
-});
+// });
 
-test("hasMany relationship dirties parent if child is updated", function() {
+// test("hasMany relationship dirties parent if child is updated", function() {
 
-});
+// });
 
-test("belongsTo relationship dirties if item is deleted", function() {
+// test("belongsTo relationship dirties if item is deleted", function() {
 
-});
+// });
 
-test("belongsTo relationship dirties item if item is updated", function() {
+// test("belongsTo relationship dirties item if item is updated", function() {
 
-});
+// });
 
