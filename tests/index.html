@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>QUnit Test Suite</title>
+  <link rel="stylesheet" href="qunit/qunit.css" />
+  <script src="qunit/qunit.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture">test markup</div>
+  <script src="../library/vendor/jquery.js" charset="utf-8"></script>
+  <script src="../library/vendor/handlebars.js" charset="utf-8"></script>
+  <script src="../library/vendor/ember.js" charset="utf-8"></script>
+  <script src="../library/vendor/ember-data.js" charset="utf-8"></script>
+  <!--script src="../library/couchdb_adapter.js" charset="utf-8"></script-->
+  <script src="../library/models.js" charset="utf-8"></script>
+  <script src="../library/googledrive_adapter.js" charset="utf-8"></script>
+  <script>
+    ENV = {
+      TESTING: true
+    };
+  </script>
+  <script>
+    (function(QUnit) {
+      // Hack QUnit to not suck for Ember objects
+      var originalTypeOf = QUnit.jsDump.typeOf;
+      QUnit.jsDump.typeOf = function(obj) {
+        if (typeof Ember !== 'undefined' && Ember.Object.detectInstance(obj)) {
+          return 'emberObject';
+        }
+
+        return originalTypeOf.call(this, obj);
+      };
+
+      QUnit.jsDump.setParser('emberObject', function(obj) {
+        return obj.toString();
+      });
+    })(QUnit);
+  </script>
+  <!--script src="../library/couchdb_adapter_test.js" charset="utf-8"></script-->
+  <script src="../library/googledrive_adapter_test.js" charset="utf-8"></script>
+</body>
+</html>
