@@ -34,7 +34,7 @@ task :upload_latest do
   uploader = GithubDownloads::Uploader.new
   uploader.authorize
 
-  uploader.upload_file("#{APPNAME}-latest.js", "#{APPNAME} Master", "library/couchdb_adapter.js")
+  uploader.upload_file("#{APPNAME}-latest.js", "#{APPNAME} Master", "library/googledrive_adapter.js")
 end
 
 namespace :upgrade do
